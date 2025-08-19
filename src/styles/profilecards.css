@@ -1,0 +1,35 @@
+.profile-card{
+    background: #EEF8F2;
+    width:238px;
+    height:211px;
+    border-radius:14px;
+    padding:20px
+
+}
+
+.profile-card h2{
+    font-weight:600;
+    font-size:24px;
+    color: #42794A;
+
+}
+.profile-card p{
+    color: #999999;
+    font-weight:500;
+    font-size:20px;
+}
+.profile-page-image-container{
+    background-color:#42794A;
+     height:64px;
+     display:flex;
+     justify-content:center;
+     align-items:center;
+     width:64px;
+     border-radius:100%;
+}
+
+
+
+
+
+

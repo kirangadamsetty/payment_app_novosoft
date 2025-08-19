@@ -1,0 +1,44 @@
+.card-container{
+     
+      display:flex;
+      justify-content:space-between;
+      border: 2px solid #61CE70;
+      border-radius:12px;
+      
+
+}
+.card-content{
+background-image: radial-gradient(100% 533.55% at 100% 0%, #61CE70 0%, #42794A 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+display:flex;
+flex-direction:column;
+align-items:flex-start;
+gap:15px;
+      border-radius:10px;
+
+padding:10px;
+}
+
+.card-content h2{
+    color:white;
+    font-weight :500;
+    width:400px;
+    font-size:40px;
+}
+.card-content span{
+    font-weight:bold!important;
+}
+
+.card-content p{
+    color: #FFFFFF99;
+
+}
+
+.card-content button{
+    color :#42794A;
+    background-color:#FFFFFF;
+    border-radius:8px;
+    padding:10px 15px;
+    border:none;
+}
+
+

@@ -1,0 +1,33 @@
+.user-card-container{
+   width: 234px;
+height: 140px;
+opacity: 1;
+border-radius: 12px;
+border: 1px solid #EEEEEE;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+}
+.user-card-container h2{
+  font-weight:700;
+  font-size:40px;
+  color: #42794A;
+
+}
+
+.user-card-container p{
+    font-weight:500;
+    font-size:20px;
+    color:#999999;
+
+}
+
+
+
+
+
+
+
+
+
