@@ -7,9 +7,9 @@
     overflow-x: hidden; /* 🚀 prevents horizontal overflow */
 }
 
-@media(max-width: 992px) {
+@media(max-width: 768px) {
     .profile-page-container {
-        margin-top: 50px;
+        margin-top: 20px!important;
     }
 }
 

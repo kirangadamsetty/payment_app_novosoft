@@ -4,9 +4,9 @@
     margin-top: 90px;
     width: 1000px;
 }
-@media(max-width: 992px) {
+@media(max-width: 768px) {
     .history-page-container{
-        margin-top: 50px!important;
+        margin-top: 20px!important;
     }
 }
 
