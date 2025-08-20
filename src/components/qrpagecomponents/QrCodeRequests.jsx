@@ -1,39 +1,46 @@
-
-import rightArrow from "../../assets/qrassets/rightarrow.png"
+import { useState } from "react"
+import "../../styles/qrcoderequest.css"
+import downArrow from "../../assets/qrassets/rightarrow.png"
 
 function QrCodeRequests({data}){
-    const {image, code, description, subdes} = data
-    return(
-        <>
-       <div style = {{display:"flex"}}>
-       <div  style = {{display:"flex", gap:"10px", width:"306px"}}>
-       <div style = {{border: "1.33px solid #EEEEEE" , display:"flex", alignItems:"center"}}>
- <img src = {image} width = "75" height = "75"/>
-       </div>
+    const {image, description, subdes} = data
+    const [expanded, setExpanded] = useState(false)
 
-          <div>
-            <h2>{code}</h2>
-            <h3>{description}</h3>
-            <p>{subdes}</p>
-          </div>
-       </div>
-         
-       
-       </div>
-       <select>
-        <option>QR Request Accepted</option>
-        <option>Awaiting Production</option>
-        <option>Awaiting Dispatch</option>
-        <option>Awaiting Delivery</option>
-       </select>
-       <hr/>
-     
-       </>
+    return(
+        <div className="qrcode-request-container">
+            <div className="qrcode-request-top">
+                <div className="qrcode-request-img">
+                    <img src={image} width="75" height="75" alt="qr"/>
+                </div>
+                <div>
+                    <h2>{description}</h2>
+                    <p>{subdes}</p>
+                    <span className="request-date">Requested on 26.04.2024</span>
+                </div>
+            </div>
+
+            <div 
+                className="qrcode-request-bar" 
+                onClick={()=>setExpanded(!expanded)}
+            >
+                <span className="accepted-text">✔ QR Request Accepted</span>
+                <img 
+                    src={downArrow} 
+                    className={`arrow-icon ${expanded ? "rotate" : ""}`} 
+                    width="18" 
+                    height="18"
+                />
+            </div>
+
+            {expanded && (
+                <div className="qrcode-request-dropdown">
+                    <div className="status">○ Awaiting Production</div>
+                    <div className="status">○ Awaiting Dispatch</div>
+                    <div className="status">○ Awaiting Delivery</div>
+                </div>
+            )}
+            <hr/>
+        </div>
     )
 }
 export default QrCodeRequests
-
-
-
-
-

@@ -1,22 +1,21 @@
 .profile-card{
     background: #EEF8F2;
-    width:238px;
-    height:211px;
+    max-width:215px;
     border-radius:14px;
-    padding:20px
+    padding:30px 20px;
 
 }
 
 .profile-card h2{
     font-weight:600;
-    font-size:24px;
+    font-size:20px;
     color: #42794A;
 
 }
 .profile-card p{
     color: #999999;
     font-weight:500;
-    font-size:20px;
+    font-size:15px;
 }
 .profile-page-image-container{
     background-color:#42794A;
@@ -25,6 +24,7 @@
      justify-content:center;
      align-items:center;
      width:64px;
+     margin-bottom:18px;
      border-radius:100%;
 }
 

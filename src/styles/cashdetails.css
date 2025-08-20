@@ -1,5 +1,6 @@
 .cash-details-container{
-     width: 425px;
+     max-width: 490px;
+     width:100%;
 opacity: 1;
 border-radius: 16px;
 border: 1px solid #EEEEEE;
@@ -7,6 +8,9 @@ padding: 32px;
 }
 .cash-details-container p{
     font-weight:600;
+    text-transform: uppercase;
+    line-height:16px;
+    letter-spacing:12%;
     color:#999999;
     font-size:14px;
 }

@@ -1,52 +1,105 @@
-.service-card-container{
-    width:490px;
-    height:200px;
+.service-card-container {
+    min-width: 460px;
     border: 1px solid #EEEEEE;
-    border-radius:16px;
-     padding:24px 32px;
-}
-.services-image-container{
-    width:96px;
-    height:120px;
-    border-radius:10px;
-    margin:10px;
-    text-align:center;
-}
-.services-image-container .services-inner-image-container{
-    box-shadow: 0px 0px 20px 0px #0000000D;
-    height:80px;
-    width:80px;
-    border-radius:16px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+    border-radius: 16px;
+    padding: 24px 32px;
+    box-sizing: border-box; 
 }
 
-.service-card-container h2{
-    font-weight:600;
-    font-size:14px;
-    letter-spacing: 12%;
-    color:#999999;
+.services-image-container {
+    width: 96px;
+    height: 120px;
+    border-radius: 10px;
+    margin: 10px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.services-image-container .services-inner-image-container {
+    box-shadow: 0px 0px 20px 0px #0000000D;
+    height: 80px;
+    width: 80px;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto; 
+}
+
+.services-image-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+.service-card-container h2 {
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.12em; 
+    margin-bottom: 10px;
+    color: #999999;
     text-transform: uppercase;
 }
 
+.services-image-container p {
+    font-size: 14px;
+    margin-top: 8px;
+    word-wrap: break-word;
+}
 
 
+@media (max-width: 768px) {
+    .service-card-container {
+        padding: 20px;
+    }
+}
 
+@media (max-width: 580px) {
+    .service-card-container {
+        min-width: 0;
+        padding: 15px;
+    }
 
+    .service-card-container > div {
+        flex-wrap: wrap; 
+        justify-content: space-around;
+    }
 
+    .services-image-container {
+        width: 45%; 
+        margin: 8px 0;
+        height: auto;
+    }
 
+    .services-image-container .services-inner-image-container {
+        height: 70px;
+        width: 70px;
+    }
 
+    .services-image-container p {
+        font-size: 12px;
+    }
+}
 
+@media (max-width: 400px) {
+    .service-card-container {
+        padding: 10px;
+    }
 
+    .service-card-container > div {
+        justify-content: center; 
+    }
 
+    .services-image-container {
+        width: 80px; 
+        margin: 5px;
+    }
 
+    .services-image-container .services-inner-image-container {
+        height: 60px;
+        width: 60px;
+    }
 
-
-
-
-
-
-
-
-
+    .services-image-container p {
+        font-size: 11px;
+    }
+}

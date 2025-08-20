@@ -75,7 +75,7 @@ function Profile(){
                     })
                 }
             </div>
-            <div style = {{display:"flex", gap:"16px"}}>
+            <div className = "profile-page-card-container" style ={{margin:"20px 0px"}}>
                 {
                     profilepageservicesData.map((data, index)=>{
                         return <ServicesCards key  ={index} data = {data}/>

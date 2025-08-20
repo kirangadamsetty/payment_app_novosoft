@@ -1,6 +1,15 @@
 
 .home-container{
-    width:1000px;
      margin-top:90px;
 }
 
+@media(max-width:992px){
+    .home-container{
+        margin-top:50px;
+    }
+}
+@media(max-width:768px){
+    .home-container{
+        margin-top:20px;
+    }
+}

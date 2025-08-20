@@ -76,7 +76,8 @@ function Home(){
     return(
      <div className = "home-container">
        <BannerCard/>
-       <div style = {{display:"flex", gap:"18px", margin:"20px 0px", flexWrap:"wrap"}}>
+
+       <div style = {{display:"flex",gap:"18px", margin:"20px 0px", flexWrap:"wrap"}}>
  {
         accountHoldersData.map((data)=>{
             return <UsersData data = {data}/>
@@ -94,6 +95,7 @@ function Home(){
             }
         </div>
      </div>
+
     )
 }
 export default Home

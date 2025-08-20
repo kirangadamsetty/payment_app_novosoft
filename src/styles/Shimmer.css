@@ -1,0 +1,44 @@
+.shimmer-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+.shimmer-header,
+.shimmer-sidebar,
+.shimmer-content {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 6px;
+}
+
+.shimmer-header {
+  height: 60px;
+  width: 100%;
+}
+
+.shimmer-body {
+  display: flex;
+  gap: 20px;
+}
+
+.shimmer-sidebar {
+  width: 250px;
+  height: 400px;
+}
+
+.shimmer-content {
+  flex-grow: 1;
+  height: 400px;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}

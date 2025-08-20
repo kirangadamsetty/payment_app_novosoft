@@ -1,44 +1,197 @@
-.card-container{
-     
-      display:flex;
-      justify-content:space-between;
-      border: 2px solid #61CE70;
-      border-radius:12px;
-      
-
-}
-.card-content{
-background-image: radial-gradient(100% 533.55% at 100% 0%, #61CE70 0%, #42794A 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
-display:flex;
-flex-direction:column;
-align-items:flex-start;
-gap:15px;
-      border-radius:10px;
-
-padding:10px;
+.card-container {
+    display: flex;
+    align-items: stretch;
+    border: 2px solid #61CE70;
+    border-radius: 12px;
+    overflow: hidden;
+    max-width: 1000px;
+    
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    background: radial-gradient(100% 533.55% at 100% 0%, #61CE70 0%, #42794A 100%);
+    height: 280px;
 }
 
-.card-content h2{
-    color:white;
-    font-weight :500;
-    width:400px;
-    font-size:40px;
-}
-.card-content span{
-    font-weight:bold!important;
-}
-
-.card-content p{
-    color: #FFFFFF99;
-
+.card-content {
+    flex: 1 1 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 40px;
+    z-index: 2;
 }
 
-.card-content button{
-    color :#42794A;
-    background-color:#FFFFFF;
-    border-radius:8px;
-    padding:10px 15px;
-    border:none;
+.card-content h2 {
+    color: white;
+    font-weight: 500;
+    font-size: 36px;
+    margin: 0;
 }
 
+.card-content span {
+    font-weight: bold;
+}
 
+.card-content p {
+    color: #ffffff99;
+    font-size: 16px;
+    margin: 0;
+}
+
+.card-content button {
+    color: #42794A;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    padding: 12px 20px;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.card-image {
+    flex: 1 1 50%;
+    background: white;
+    clip-path: polygon(12% 0, 100% 0, 100% 100%, 0% 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-image img {
+    height: 100%;
+    width: auto;
+    margin-bottom: -10px;
+    object-fit: contain;
+}
+
+@media (max-width: 1200px) {
+    .card-container {
+        height: 220px;
+    }
+    .card-content {
+        padding: 30px;
+        gap: 10px;
+    }
+    .card-content h2 {
+        font-size: 28px;
+    }
+    .card-content p {
+        font-size: 15px;
+    }
+    .card-content button {
+        font-size: 13px;
+        padding: 10px 16px;
+    }
+    .card-image img {
+        height: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .card-container {
+        height: 180px;
+    }
+    .card-content {
+        padding: 20px;
+        gap: 8px;
+    }
+    .card-content h2 {
+        font-size: 22px;
+    }
+    .card-content p {
+        font-size: 13px;
+    }
+    .card-content button {
+        font-size: 11px;
+        padding: 8px 10px;
+    }
+    .card-image img {
+        height: 80%;
+    }
+}
+
+@media (max-width: 580px) {
+    .card-container {
+        height: 150px;
+        padding: 0 10px;
+    }
+    .card-content {
+        padding: 10px;
+        gap: 6px;
+    }
+    .card-content h2 {
+        font-size: 16px;
+    }
+    .card-content p {
+        font-size: 11px;
+    }
+    .card-content button {
+        font-size: 9px;
+        padding: 6px 8px;
+    }
+    .card-image {
+        clip-path: polygon(12% 0, 100% 0, 100% 100%, 0% 100%);
+    }
+    .card-image img {
+        height: 80%;
+        margin-bottom: -10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card-container {
+        height: 120px;
+        padding: 0 5px;
+    }
+    .card-content {
+        padding: 8px;
+        gap: 5px;
+    }
+    .card-content h2 {
+        font-size: 14px;
+        line-height: 1.2;
+    }
+    .card-content p {
+        font-size: 9px;
+    }
+    .card-content button {
+        font-size: 8px;
+        padding: 5px 6px;
+    }
+    .card-image {
+        clip-path: polygon(12% 0, 100% 0, 100% 100%, 0% 100%);
+    }
+    .card-image img {
+        height: 70%;
+        margin-bottom: -5px;
+    }
+}
+
+@media (max-width: 380px) {
+    .card-container {
+        height: 100px;
+        padding: 0 5px;
+    }
+    .card-content {
+        padding: 5px;
+        gap: 4px;
+    }
+    .card-content h2 {
+        font-size: 12px;
+    }
+    .card-content p {
+        font-size: 8px;
+    }
+    .card-content button {
+        font-size: 7px;
+        padding: 4px 5px;
+    }
+    .card-image img {
+        height: 60%;
+        margin-bottom: -3px;
+    }
+}
