@@ -4,6 +4,12 @@
     margin-top: 90px;
     width: 1000px;
 }
+@media(max-width: 992px) {
+    .history-page-container{
+        margin-top: 50px;
+    }
+}
+
 .history-page-heading h2 {
     font-weight: 700;
     font-size: 32px;
