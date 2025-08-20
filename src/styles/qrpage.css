@@ -9,7 +9,7 @@
 }
 @media(max-width:992px){
     .qr-container{
-        margin-top:50px;
+        margin-top:50px!important;
     }
 }
 .qr-box-container {
