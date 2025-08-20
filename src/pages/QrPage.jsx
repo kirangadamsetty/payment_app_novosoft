@@ -38,7 +38,7 @@ function QrPage(){
             <h1>Manage QR/POS</h1>
             <div style ={{display:"flex", gap:"18px"}}>
                 
-                <div className = "qr-box-container">
+                <div className = "qr-box-container" style = {{padding:"10px 0px"}}>
                     <div style = {{display:"flex",flexDirection:"column",alignItems:"center", justifyContent:"center"}}>
                         <img src = {qrpagelogo} className = "qr-page-logo"/>
                         <img src = {mainqr} className ="main-qr-image" />
