@@ -12,7 +12,7 @@ function QrCodeRequests({data}){
                 <div className="qrcode-request-img">
                     <img src={image} width="75" height="75" alt="qr"/>
                 </div>
-                <div>
+                <div style = {{paddingLeft:"10px"}}>
                     <h2>{description}</h2>
                     <p>{subdes}</p>
                     <span className="request-date">Requested on 26.04.2024</span>
