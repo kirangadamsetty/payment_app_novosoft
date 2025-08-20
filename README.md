@@ -24,4 +24,4 @@
 ## Setup & Installation
 1. Clone the repository:
    ```bash
-   git clone <your-repo-url>
+  [ git clone <your-repo-url>](https://github.com/kirangadamsetty/payment_app_novosoft.git)
