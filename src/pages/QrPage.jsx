@@ -33,6 +33,40 @@ function QrPage(){
         })
     }
 
+    const handleDownload = async () => {
+        try {
+          const response = await fetch(mainqr);
+          const blob = await response.blob();
+          const url = window.URL.createObjectURL(blob);
+          const link = document.createElement('a');
+          link.href = url;
+          link.download = 'qr-code.png';
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+          window.URL.revokeObjectURL(url);
+        } catch (error) {
+          console.error("Error downloading the QR code:", error);
+        }
+      };
+      
+    const handleCopy = async () => {
+        const upiId = "9876543210@qpay";
+        try {
+          await navigator.clipboard.writeText(upiId);
+          alert("UPI ID copied to clipboard!");
+        } catch (error) {
+          console.error("Failed to copy UPI ID:", error);
+          const tempInput = document.createElement('input');
+          tempInput.value = upiId;
+          document.body.appendChild(tempInput);
+          tempInput.select();
+          document.execCommand('copy');
+          document.body.removeChild(tempInput);
+          alert("UPI ID copied to clipboard!");
+        }
+    };
+
     return(
         <div className ="qr-container">
             <h1>Manage QR/POS</h1>
@@ -42,10 +76,10 @@ function QrPage(){
                     <div style = {{display:"flex",flexDirection:"column",alignItems:"center", justifyContent:"center"}}>
                         <img src = {qrpagelogo} className = "qr-page-logo"/>
                         <img src = {mainqr} className ="main-qr-image" />
-                        <h2>UPI ID : 9876543210@qpay <img src = {copy} /></h2>
+                        <h2>UPI ID : 9876543210@qpay <img src = {copy} onClick={handleCopy} style={{ cursor: "pointer" }}/></h2>
                         <p>Ibrahim Mohammedali</p>
                         <div style = {{display:"flex",gap:"20px"}}>
-                            <button className = "main-qr-button"><img src = {download} className = "icons"/>Download</button>
+                            <button className = "main-qr-button" onClick={handleDownload}><img src = {download} className = "icons"/>Download</button>
                             <button className = "main-qr-button"><img src = {share} className = "icons"/>Share</button>
                         </div>
                     </div>
