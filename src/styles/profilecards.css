@@ -1,6 +1,6 @@
 .profile-card{
     background: #EEF8F2;
-    max-width:215px;
+    max-width:217px;
     border-radius:14px;
     padding:30px 20px;
 
@@ -29,7 +29,11 @@
 }
 
 
-
+@media(max-width:768px){
+    .profile-card{
+        max-width:100%;
+    }
+}
 
 
 
